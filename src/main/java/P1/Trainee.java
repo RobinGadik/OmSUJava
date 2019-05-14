@@ -1,6 +1,8 @@
 package P1;
 
-public class Trainee {
+import java.io.Serializable;
+
+public class Trainee implements Serializable {
     private String firstName;
     private String secondName;
     private int rating;
@@ -76,5 +78,14 @@ public class Trainee {
             throw new TraineeException(TraineeErrorCode.RATING_ERROR);
         }
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "Trainee{" +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", rating=" + rating +
+                '}';
     }
 }

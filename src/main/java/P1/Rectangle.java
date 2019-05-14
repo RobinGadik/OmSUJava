@@ -1,6 +1,8 @@
 package P1;
 
-public class Rectangle {
+import java.io.Serializable;
+
+public class Rectangle implements Serializable {
     private int left;
 
     @Override
